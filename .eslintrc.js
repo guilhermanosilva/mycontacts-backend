@@ -25,5 +25,6 @@ module.exports = {
     'linebreak-style': 0,
     'class-methods-use-this': 'off',
     'no-unused-vars': 'warn',
+    'consistent-return': 'off',
   },
 };

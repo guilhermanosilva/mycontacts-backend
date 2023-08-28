@@ -11,7 +11,7 @@ class ContactController {
     const contact = await ContactRepository.findById(id);
 
     if (!contact) {
-      response.status(404).json('Error: user not found');
+      return response.status(404).json('Error: contact not found');
     }
 
     response.json(contact);
@@ -25,8 +25,18 @@ class ContactController {
     // atualizar um registro
   }
 
-  delete() {
-    // deletar  um registro
+  async delete(request, response) {
+    const { id } = request.params;
+
+    const contact = await ContactRepository.findById(id);
+
+    if (!contact) {
+      return response.status(404).json('Error: contact not found');
+    }
+
+    await ContactRepository.delete(id);
+
+    response.sendStatus(204);
   }
 }
 
