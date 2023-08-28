@@ -26,5 +26,6 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-unused-vars': 'warn',
     'consistent-return': 'off',
+    camelcase: 'off',
   },
 };
