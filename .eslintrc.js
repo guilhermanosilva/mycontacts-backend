@@ -22,7 +22,9 @@ module.exports = {
   rules: {
     'linebreak-style': 0,
     'class-methods-use-this': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': ['warn', {
+      argsIgnorePattern: 'next'
+    }],
     'consistent-return': 'off',
     'object-curly-newline': 'off',
     'no-confusing-arrow': 'off',
