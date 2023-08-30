@@ -10,9 +10,7 @@ module.exports = {
       env: {
         node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -26,6 +24,8 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-unused-vars': 'warn',
     'consistent-return': 'off',
+    'object-curly-newline': 'off',
+    'no-confusing-arrow': 'off',
     camelcase: 'off',
   },
 };
